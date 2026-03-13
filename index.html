@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enerbuff Partnership Survey</title>
+<title>Enerbuff Solutions Private Limited • Energy Collaboration Platform</title>
 
 <style>
 
@@ -131,6 +131,108 @@ color:#6b7280;
 margin-top:18px;
 }
 
+.supported-title{
+margin-top:18px;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#9ca3af;
+}
+
+.supported-title::after{
+content:"";
+display:block;
+width:80%;
+height:1px;
+background:#1f2937;
+margin:10px auto 0 auto;
+}
+
+.partners{
+margin-top:12px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.partner{
+display:flex;
+flex-direction:column;
+align-items:center;
+width:110px;
+text-align:center;
+}
+
+/* logo container */
+.partner img{
+width:60px;
+height:60px;
+padding:8px;
+background:white;
+border-radius:10px;
+object-fit:contain;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+margin-bottom:8px;
+}
+
+.partner span{
+font-size:13px;
+color:#e5e7eb;
+}
+
+.company-brand{
+display:flex;
+align-items:center;   /* centers logo with text block */
+justify-content:center;
+gap:20px;
+}
+
+.company-brand img{
+width:78px;
+height:78px;
+object-fit:contain;
+margin-top:-6px;   /* small optical adjustment */
+}
+
+.company-text h1{
+margin:0;
+font-size:44px;
+font-weight:800;
+color:#22c55e;
+letter-spacing:1px;
+line-height:0.95;
+}
+
+.company-subname{
+margin-top:6px;
+margin-bottom:14px;   /* more breathing space */
+font-size:20px;
+font-weight:500;
+color:#d1d5db;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.tagline{
+margin-top:12px;
+font-size:13px;
+color:#9ca3af;
+letter-spacing:1.5px;
+}
+
+.survey-title{
+font-size:14px;
+margin-top:10px;
+color:#d1d5db;
+text-align:center;
+}
+
+.company-text h1{
+font-size:36px;
+}
+
 </style>
 </head>
 
@@ -139,26 +241,60 @@ margin-top:18px;
 <div class="container">
 
 <div class="header">
-<h1>ENERBUFF</h1>
-<p>Energy Innovation & Industry Collaboration Survey</p>
+
+<div class="company-brand">
+  <img src="enerbuff-logo.png" alt="Enerbuff Logo">
+
+  <div class="company-text">
+    <h1>ENERBUFF SOLUTIONS</h1>
+    <div class="company-subname">Private Limited</div>
+    <p class="tagline">DEMAND RESPONSE AGGREGATOR</p>
+  </div>
+</div>
+
+<p class="survey-title">Energy Innovation &amp; Industry Collaboration Survey</p>
+
+<div class="supported-title">Supported By</div>
+<div class="partners">
+    <div class="partner">
+      <img src="fiit-logo.png" alt="FIIT Delhi">
+      <span>FITT IIT Delhi</span>
+    </div>
+
+    <div class="partner">
+      <img src="ministry-power.png" alt="Ministry of Power">
+      <span>Ministry of Power</span>
+    </div>
+
+    <div class="partner">
+      <img src="rec-logo.png" alt="REC Limited">
+      <span>REC Limited</span>
+    </div>
+  </div>
+
 </div>
 
 <div class="form-box">
 
 <div class="section-title">Partner With Us</div>
 <div class="section-subtitle">
-Share your details so we can explore collaboration opportunities with Enerbuff.
+We request you to provide your details so we may initiate discussions on potential collaboration with Enerbuff Solutions.
 </div>
 
 <div class="note">
-Your responses help Enerbuff connect with energy leaders, innovators, and institutions.
+Your responses will help Enerbuff Solutions explore potential collaboration opportunities.
 </div>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScabXg9S6fTL15WG_7NDxoc0Z_6m2DQRAwmGx9Y0i0sSMEYsQ/formResponse" method="POST" target="_blank">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSdfnRu5-gl7n6_mwgOLflA6LU2hWIj0cLvdUDOMJdLSAvRtvQ/formResponse" method="POST" target="_blank">
 
 <div class="form-group">
-<label>Are you a member of any Indian Electrical Government Entity?</label>
-<select name="entry.1156839308" required>
+<label>What is the name of the utility you belong to?</label>
+<input type="text" name="entry.762303073" placeholder="Enter utility name" required>
+</div>
+
+<div class="form-group">
+<label>Do you belong to a power utility company?</label>
+<select name="entry.5931388" required>
 <option value="">Select option</option>
 <option value="Yes">Yes</option>
 <option value="No">No</option>
@@ -166,31 +302,27 @@ Your responses help Enerbuff connect with energy leaders, innovators, and instit
 </div>
 
 <div class="form-group">
-<label>Are you a member of any other country's Electrical Government Entity?</label>
-<select name="entry.227165865" required>
+<label>Would you be interested in exploring pilot opportunities with Enerbuff Solutions?</label>
+<select name="entry.1934158837" required>
 <option value="">Select option</option>
 <option value="Yes">Yes</option>
 <option value="No">No</option>
-</select>
-</div>
-
-<div class="form-group">
-<label>Would you like to work with Enerbuff?</label>
-<select name="entry.783682654" required>
-<option value="">Select option</option>
-<option value="Yes, Definitely">Yes, Definitely</option>
-<option value="No">No just exploring</option>
 </select>
 </div>
 
 <div class="form-group">
 <label>Full Name</label>
-<input type="text" name="entry.1731026742" placeholder="Enter your name" required>
+<input type="text" name="entry.1210621691" placeholder="Enter your name" required>
 </div>
 
 <div class="form-group">
-<label>Company / Organization</label>
-<input type="text" name="entry.1530582839" placeholder="Enter organization" required>
+<label>Email Id</label>
+<input type="email" name="entry.994554521" placeholder="Enter your email" required>
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input type="tel" name="entry.1304851956" placeholder="Enter your phone number" required>
 </div>
 
 <button type="submit">Submit Survey</button>
@@ -198,7 +330,7 @@ Your responses help Enerbuff connect with energy leaders, innovators, and instit
 </form>
 
 <div class="footer">
-© 2026 Enerbuff • Energy Collaboration Platform
+© 2026 Enerbuff Solutions Private Limited• Energy Collaboration Platform
 </div>
 
 </div>
