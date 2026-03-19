@@ -1,461 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enerbuff Solutions Private Limited • Energy Collaboration Platform</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enerbuff Solutions Private Limited • Energy Collaboration Platform</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<style>
 
-    body{
-      font-family:Arial, sans-serif;
-      background:linear-gradient(135deg,#000000,#0f172a);
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:20px;
-      color:white;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .container{
-      width:100%;
-      max-width:500px;
-      background:#111;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 20px 45px rgba(0,0,0,0.6);
-      border:1px solid #1f2937;
-    }
+body{
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#000000,#0f172a);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+color:white;
+}
 
-    .header{
-      background:linear-gradient(135deg,#000000,#065f46);
-      padding:28px 24px;
-      text-align:center;
-    }
+.container{
+width:100%;
+max-width:500px;
+background:#111;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 20px 45px rgba(0,0,0,0.6);
+border:1px solid #1f2937;
+}
 
-    .company-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:14px;
-      margin-bottom:10px;
-      text-align:left;
-    }
+.header{
+background:linear-gradient(135deg,#000000,#065f46);
+padding:30px;
+text-align:center;
+}
 
-    .company-name-wrap{
-      flex:1;
-      min-width:0;
-    }
+.header h1{
+font-size:32px;
+color:#22c55e;
+letter-spacing:1px;
+}
 
-    .company-name-main{
-      font-size:30px;
-      font-weight:800;
-      color:#22c55e;
-      letter-spacing:1px;
-      line-height:1.02;
-    }
+.header p{
+font-size:14px;
+margin-top:8px;
+color:#9ca3af;
+}
 
-    .company-name-sub{
-      margin-top:8px;
-      font-size:16px;
-      color:#d1d5db;
-      letter-spacing:2px;
-      text-transform:uppercase;
-    }
+.form-box{
+padding:30px;
+}
 
-    .company-logo{
-      width:72px;
-      height:72px;
-      object-fit:contain;
-      flex-shrink:0;
-    }
+.section-title{
+font-size:20px;
+margin-bottom:8px;
+color:#22c55e;
+}
 
-    .tagline{
-      font-size:13px;
-      color:#9ca3af;
-      letter-spacing:2px;
-      text-align:center;
-      margin-top:8px;
-      text-transform:uppercase;
-    }
+.section-subtitle{
+font-size:14px;
+color:#9ca3af;
+margin-bottom:22px;
+}
 
-    .survey-title{
-      margin-top:12px;
-      font-size:15px;
-      color:#d1d5db;
-      text-align:center;
-      line-height:1.4;
-    }
+.form-group{
+margin-bottom:20px;
+}
 
-    .supported-title{
-      margin-top:20px;
-      font-size:12px;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      color:#9ca3af;
-    }
+label{
+display:block;
+margin-bottom:8px;
+font-weight:bold;
+font-size:14px;
+color:#e5e7eb;
+}
 
-    .supported-title::after{
-      content:"";
-      display:block;
-      width:82%;
-      height:1px;
-      background:#1f2937;
-      margin:12px auto 0 auto;
-    }
+select,input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #374151;
+background:#000;
+color:white;
+font-size:15px;
+}
 
-    .partners{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:22px 14px;
-      justify-items:center;
-      align-items:start;
-    }
+select:focus,input:focus{
+outline:none;
+border-color:#22c55e;
+box-shadow:0 0 6px #22c55e55;
+}
 
-    .partner{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      width:100%;
-      max-width:110px;
-    }
+.note{
+background:#022c22;
+border-left:4px solid #22c55e;
+padding:12px;
+border-radius:6px;
+font-size:13px;
+margin-bottom:20px;
+color:#a7f3d0;
+}
 
-    .partner img{
-      width:62px;
-      height:62px;
-      padding:8px;
-      background:white;
-      border-radius:12px;
-      object-fit:contain;
-      box-shadow:0 4px 10px rgba(0,0,0,0.35);
-      margin-bottom:8px;
-    }
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:black;
+cursor:pointer;
+transition:0.3s;
+}
 
-    .partner span{
-      font-size:13px;
-      color:#e5e7eb;
-      line-height:1.3;
-    }
+button:hover{
+background:linear-gradient(135deg,#16a34a,#15803d);
+transform:translateY(-1px);
+}
 
-    .form-box{
-      padding:28px 24px;
-    }
+.footer{
+text-align:center;
+font-size:12px;
+color:#6b7280;
+margin-top:18px;
+}
 
-    .section-title{
-      font-size:20px;
-      margin-bottom:10px;
-      color:#22c55e;
-    }
+.supported-title{
+margin-top:18px;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#9ca3af;
+}
 
-    .section-subtitle{
-      font-size:14px;
-      color:#9ca3af;
-      margin-bottom:22px;
-      line-height:1.5;
-    }
+.supported-title::after{
+content:"";
+display:block;
+width:80%;
+height:1px;
+background:#1f2937;
+margin:10px auto 0 auto;
+}
 
-    .form-group{
-      margin-bottom:20px;
-    }
+.partners{
+margin-top:12px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
 
-    label{
-      display:block;
-      margin-bottom:8px;
-      font-weight:bold;
-      font-size:14px;
-      color:#e5e7eb;
-      line-height:1.4;
-    }
+.partner{
+display:flex;
+flex-direction:column;
+align-items:center;
+width:110px;
+text-align:center;
+}
 
-    select,input{
-      width:100%;
-      padding:12px;
-      border-radius:8px;
-      border:1px solid #374151;
-      background:#000;
-      color:white;
-      font-size:15px;
-    }
+/* logo container */
+.partner img{
+width:60px;
+height:60px;
+padding:8px;
+background:white;
+border-radius:10px;
+object-fit:contain;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+margin-bottom:8px;
+}
 
-    select:focus,input:focus{
-      outline:none;
-      border-color:#22c55e;
-      box-shadow:0 0 6px #22c55e55;
-    }
+.partner span{
+font-size:13px;
+color:#e5e7eb;
+}
 
-    .note{
-      background:#022c22;
-      border-left:4px solid #22c55e;
-      padding:12px;
-      border-radius:6px;
-      font-size:13px;
-      margin-bottom:20px;
-      color:#a7f3d0;
-      line-height:1.5;
-    }
+.company-brand{
+display:flex;
+align-items:center;   /* centers logo with text block */
+justify-content:center;
+gap:20px;
+}
 
-    button{
-      width:100%;
-      padding:14px;
-      border:none;
-      border-radius:10px;
-      font-size:16px;
-      font-weight:bold;
-      background:linear-gradient(135deg,#22c55e,#16a34a);
-      color:black;
-      cursor:pointer;
-      transition:0.3s;
-    }
+.company-brand img{
+width:78px;
+height:78px;
+object-fit:contain;
+margin-top:-6px;   /* small optical adjustment */
+}
 
-    button:hover{
-      background:linear-gradient(135deg,#16a34a,#15803d);
-      transform:translateY(-1px);
-    }
+.company-text h1{
+margin:0;
+font-size:44px;
+font-weight:800;
+color:#22c55e;
+letter-spacing:1px;
+line-height:0.95;
+}
 
-    .footer{
-      text-align:center;
-      font-size:12px;
-      color:#6b7280;
-      margin-top:18px;
-      line-height:1.5;
-    }
+.company-subname{
+margin-top:6px;
+margin-bottom:14px;   /* more breathing space */
+font-size:20px;
+font-weight:500;
+color:#d1d5db;
+letter-spacing:1px;
+text-transform:uppercase;
+}
 
-    /* Tablet */
-    @media (max-width: 768px){
-      .company-name-main{
-        font-size:26px;
-      }
+.tagline{
+margin-top:12px;
+font-size:13px;
+color:#9ca3af;
+letter-spacing:1.5px;
+}
 
-      .company-name-sub{
-        font-size:15px;
-      }
+.survey-title{
+font-size:14px;
+margin-top:10px;
+color:#d1d5db;
+text-align:center;
+}
 
-      .company-logo{
-        width:64px;
-        height:64px;
-      }
+.company-text h1{
+font-size:36px;
+}
 
-      .partners{
-        grid-template-columns:repeat(3, 1fr);
-        gap:20px 10px;
-      }
-    }
+@media (max-width: 600px){
 
-    /* Mobile */
-    @media (max-width: 520px){
-      body{
-        padding:12px;
-        align-items:flex-start;
-      }
+  .partners{
+    gap: 16px;
+    justify-content: center;
+  }
 
-      .container{
-        border-radius:16px;
-      }
+  .partner{
+    width: 80px;
+  }
 
-      .header{
-        padding:22px 18px;
-      }
+  .partner img{
+    width: 48px;
+    height: 48px;
+    padding: 6px;
+  }
 
-      .company-header{
-        align-items:center;
-        gap:12px;
-      }
+  .partner span{
+    font-size: 11px;
+  }
 
-      .company-name-main{
-        font-size:22px;
-        line-height:1.05;
-        letter-spacing:0.5px;
-      }
+}
 
-      .company-name-sub{
-        margin-top:6px;
-        font-size:13px;
-        letter-spacing:1.5px;
-      }
-
-      .company-logo{
-        width:54px;
-        height:54px;
-      }
-
-      .tagline{
-        font-size:11px;
-        letter-spacing:1.6px;
-        line-height:1.4;
-      }
-
-      .survey-title{
-        font-size:13px;
-        line-height:1.5;
-        margin-top:10px;
-      }
-
-      .supported-title{
-        font-size:11px;
-        letter-spacing:2.5px;
-        margin-top:18px;
-      }
-
-      .partners{
-        grid-template-columns:repeat(2, 1fr);
-        gap:18px 12px;
-        margin-top:16px;
-      }
-
-      .partner{
-        max-width:none;
-      }
-
-      .partner:last-child{
-        grid-column:1 / -1;
-        justify-self:center;
-      }
-
-      .partner img{
-        width:58px;
-        height:58px;
-        border-radius:10px;
-      }
-
-      .partner span{
-        font-size:12px;
-      }
-
-      .form-box{
-        padding:22px 18px;
-      }
-
-      .section-title{
-        font-size:18px;
-      }
-
-      .section-subtitle{
-        font-size:13px;
-      }
-
-      label{
-        font-size:13px;
-      }
-
-      select,input{
-        font-size:14px;
-        padding:11px;
-      }
-
-      button{
-        font-size:15px;
-        padding:13px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="company-header">
-        <div class="company-name-wrap">
-          <div class="company-name-main">ENERBUFF SOLUTIONS</div>
-          <div class="company-name-sub">PRIVATE LIMITED</div>
-        </div>
 
-        <img src="enerbuff-logo.png" alt="Enerbuff Logo" class="company-logo" />
-      </div>
+<div class="container">
 
-      <p class="tagline">Demand Response Aggregator</p>
+<div class="header">
 
-      <p class="survey-title">
-        Energy Innovation &amp; Industry Collaboration Survey
-      </p>
+<div class="company-brand">
+  <img src="enerbuff-logo.png" alt="Enerbuff Logo">
 
-      <div class="supported-title">Supported By</div>
+  <div class="company-text">
+    <h1>ENERBUFF SOLUTIONS</h1>
+    <div class="company-subname">Private Limited</div>
+    <p class="tagline">DEMAND RESPONSE AGGREGATOR</p>
+  </div>
+</div>
 
-      <div class="partners">
-        <div class="partner">
-          <img src="fiit-logo.png" alt="FITT IIT Delhi" />
-          <span>FITT IIT Delhi</span>
-        </div>
+<p class="survey-title">Energy Innovation &amp; Industry Collaboration Survey</p>
 
-        <div class="partner">
-          <img src="ministry-power.png" alt="Ministry of Power" />
-          <span>Ministry of Power</span>
-        </div>
-
-        <div class="partner">
-          <img src="rec-logo.png" alt="REC Limited" />
-          <span>REC Limited</span>
-        </div>
-      </div>
+<div class="supported-title">Supported By</div>
+<div class="partners">
+    <div class="partner">
+      <img src="fiit-logo.png" alt="FIIT Delhi">
+      <span>FITT IIT Delhi</span>
     </div>
 
-    <div class="form-box">
-      <div class="section-title">Partner With Us</div>
+    <div class="partner">
+      <img src="ministry-power.png" alt="Ministry of Power">
+      <span>Ministry of Power</span>
+    </div>
 
-      <div class="section-subtitle">
-        We request you to provide your details so we may initiate discussions on
-        potential collaboration with Enerbuff Solutions.
-      </div>
-
-      <div class="note">
-        Your responses will help Enerbuff Solutions explore potential
-        collaboration opportunities.
-      </div>
-
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdfnRu5-gl7n6_mwgOLflA6LU2hWIj0cLvdUDOMJdLSAvRtvQ/formResponse" method="POST" target="_blank">
-
-        <div class="form-group">
-          <label>What is the name of the utility you belong to?</label>
-          <input type="text" name="entry.762303073" placeholder="Enter utility name" required />
-        </div>
-
-        <div class="form-group">
-          <label>Do you belong to a power utility company?</label>
-          <select name="entry.5931388" required>
-            <option value="">Select option</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Would you be interested in exploring pilot opportunities with Enerbuff Solutions?</label>
-          <select name="entry.1934158837" required>
-            <option value="">Select option</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" name="entry.1210621691" placeholder="Enter your name" required />
-        </div>
-
-        <div class="form-group">
-          <label>Email Id</label>
-          <input type="email" name="entry.994554521" placeholder="Enter your email" required />
-        </div>
-
-        <div class="form-group">
-          <label>Phone Number</label>
-          <input type="tel" name="entry.1304851956" placeholder="Enter your phone number" required />
-        </div>
-
-        <button type="submit">Submit Survey</button>
-      </form>
-
-      <div class="footer">
-        © 2026 Enerbuff Solutions Private Limited • Energy Collaboration Platform
-      </div>
+    <div class="partner">
+      <img src="rec-logo.png" alt="REC Limited">
+      <span>REC Limited</span>
     </div>
   </div>
+
+</div>
+
+<div class="form-box">
+
+<div class="section-title">Partner With Us</div>
+<div class="section-subtitle">
+We request you to provide your details so we may initiate discussions on potential collaboration with Enerbuff Solutions.
+</div>
+
+<div class="note">
+Your responses will help Enerbuff Solutions explore potential collaboration opportunities.
+</div>
+
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSdfnRu5-gl7n6_mwgOLflA6LU2hWIj0cLvdUDOMJdLSAvRtvQ/formResponse" method="POST" target="_blank">
+
+<div class="form-group">
+<label>What is the name of the company you belong to?</label>
+<input type="text" name="entry.762303073" placeholder="Enter company name" required>
+</div>
+
+<div class="form-group">
+<label>Do you belong to a power utility company?</label>
+<select name="entry.5931388" required>
+<option value="">Select option</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Would you be interested in exploring pilot opportunities with Enerbuff Solutions?</label>
+<select name="entry.1934158837" required>
+<option value="">Select option</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" name="entry.1210621691" placeholder="Enter your name" required>
+</div>
+
+<div class="form-group">
+<label>Email Id</label>
+<input type="email" name="entry.994554521" placeholder="Enter your email" required>
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input type="tel" name="entry.1304851956" placeholder="Enter your phone number" required>
+</div>
+
+<button type="submit">Submit Response</button>
+
+</form>
+
+<div class="footer">
+© 2026 Enerbuff Solutions Private Limited• Energy Collaboration Platform
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
